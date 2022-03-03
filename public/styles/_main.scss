@@ -1,0 +1,22 @@
+@import "./variables";
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.main-container {
+  padding-top: 12em;
+  width: 100%;
+  min-height: 100vh;
+  background-color: $secondary-gray;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}

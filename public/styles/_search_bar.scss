@@ -1,0 +1,35 @@
+@import "./variables";
+@import "./mixins";
+
+.search-bar {
+  display: flex;
+  margin: 1rem 10px 0.5rem;
+  input {
+    outline: none;
+    border: 1px solid $primary-gray;
+    border-radius: 5px 0 0 5px;
+    width: 90%;
+    font-size: $font-middle;
+    padding: 5px 3px;
+  }
+  button {
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 5px 0 3px;
+    border-radius: 0 5px 5px 0;
+    width: 10%;
+    background-color: $secondary-red;
+    transition: background-color 0.3s ease-in-out;
+    &:hover {
+      background-color: $primary-red;
+    }
+    cursor: pointer;
+    .search-btn {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      background: url("../img/icons/search.svg") no-repeat center center;
+    }
+  }
+}

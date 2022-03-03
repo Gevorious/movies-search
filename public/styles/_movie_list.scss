@@ -1,0 +1,122 @@
+@import "./variables";
+@import "./mixins";
+
+.movie-list {
+  padding: 32px 16px;
+  .movies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    .movie {
+      position: relative;
+      display: flex;
+      width: calc(20% - 20px);
+      padding: 10px;
+      flex-direction: column;
+      .movie-img {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        &:hover {
+          .overview {
+            transform: translateY(0);
+          }
+        }
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+        .review {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 40px;
+          background-color: $primary-red;
+          color: #fff;
+          border-radius: 0 0 16px 0;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+            0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .overview {
+          line-height: 1.5;
+          position: absolute;
+          bottom: 0;
+          background-color: $secondary-red;
+          padding: 12px;
+          font-size: $font-small;
+          font-style: italic;
+          color: #fff;
+          margin: 0;
+          transform: translateY(100%);
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+      .info {
+        .title {
+          position: relative;
+          margin: 8px 0 0;
+          font-size: $font-large;
+          &:hover {
+            .full-title {
+              display: block;
+            }
+          }
+          .full-title {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $secondary-gray;
+          }
+        }
+        .release {
+          margin-top: 5px;
+          font-size: $font-small;
+          span {
+            font-style: italic;
+            color: $primary-gray;
+          }
+        }
+        .button {
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .movie-list {
+    .movies-grid {
+      .movie {
+        width: calc(25% - 20px);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-list {
+    .movies-grid {
+      .movie {
+        width: calc(50% - 20px);
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-list {
+    .movies-grid {
+      .movie {
+        width: 100%;
+      }
+    }
+  }
+}
