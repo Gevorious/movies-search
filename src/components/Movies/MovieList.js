@@ -44,7 +44,7 @@ const MovieList = () => {
   const logSearchTerm = async (term) => {
     try {
       axios.post(
-        "https://movies-search-55694-default-rtdb.europe-west1.firebasedatabase.app/tags.json",
+        "https://database-9ce06-default-rtdb.europe-west1.firebasedatabase.app/tags.json",
         { tag: term }
       );
     } catch (err) {

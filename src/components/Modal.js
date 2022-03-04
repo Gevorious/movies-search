@@ -11,7 +11,7 @@ const Modal = ({ modalHandler }) => {
     setLoading(true);
     try {
       const response = await axios.get(
-        "https://movies-search-55694-default-rtdb.europe-west1.firebasedatabase.app/tags.json"
+        "https://database-9ce06-default-rtdb.europe-west1.firebasedatabase.app/tags.json"
       );
       setLogs(transformData(response.data).reverse());
       setLoading(false);
