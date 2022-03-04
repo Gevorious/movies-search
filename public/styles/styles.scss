@@ -1,3 +1,8 @@
+@import "./variables";
+@import "./mixins";
 @import "./main";
-@import "./_movie_list";
-@import "./_search_bar";
+@import "./spinner";
+@import "./modal";
+@import "./header";
+@import "./movie_list";
+@import "./search_bar";

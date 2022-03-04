@@ -1,0 +1,30 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: $dark-gray;
+  color: white;
+  padding: 20px 30px;
+  font-size: $font-large;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7);
+  ul {
+    width: 100%;
+    padding: 0 1rem;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    .button {
+      cursor: pointer;
+      background-color: $primary-red;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+  }
+}

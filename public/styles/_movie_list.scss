@@ -1,17 +1,13 @@
-@import "./variables";
-@import "./mixins";
-
 .movie-list {
   padding: 32px 16px;
   .movies-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     width: 100%;
     .movie {
       position: relative;
       display: flex;
-      width: calc(20% - 20px);
+      width: 20%;
       padding: 10px;
       flex-direction: column;
       .movie-img {
@@ -32,9 +28,7 @@
           position: absolute;
           top: 0;
           left: 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include centered-flex(column);
           width: 40px;
           height: 40px;
           background-color: $primary-red;
@@ -89,13 +83,18 @@
       }
     }
   }
+
+  .spinner-wrapper {
+    margin-top: 10%;
+    @include centered-flex(inherit);
+  }
 }
 
 @media (max-width: 1024px) {
   .movie-list {
     .movies-grid {
       .movie {
-        width: calc(25% - 20px);
+        width: 25%;
       }
     }
   }
@@ -105,7 +104,7 @@
   .movie-list {
     .movies-grid {
       .movie {
-        width: calc(50% - 20px);
+        width: 50%;
       }
     }
   }

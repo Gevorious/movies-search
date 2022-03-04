@@ -4,7 +4,7 @@ const SearchBar = ({ query, onSearch }) => {
   const [term, setTerm] = useState("");
 
   useEffect(() => {
-    setTerm(query);
+    query ? setTerm(query) : setTerm("");
   }, [query]);
 
   return (
