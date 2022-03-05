@@ -28,3 +28,9 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .search-logs-modal {
+    min-width: 80%;
+  }
+}

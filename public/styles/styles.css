@@ -124,6 +124,11 @@ html {
   padding: 0.5rem 0;
 }
 
+@media (max-width: 768px) {
+  .search-logs-modal {
+    min-width: 80%;
+  }
+}
 .header {
   position: fixed;
   top: 0;
